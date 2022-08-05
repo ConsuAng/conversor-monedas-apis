@@ -20,28 +20,31 @@ const getCoinsData = async (codigo) => {
     const response = await fetch(`https://mindicador.cl/api/${codigo}`)
     const serialData = await response.json();
 
-    const labels = serialData.serie.map((data) => {
-      console.log(data.fecha);
+    const fechas = serialData.serie.map((data) => {
       const fecha = new Date(data.fecha);
       return fecha.toLocaleDateString();
     });
+
+    const fechasReverse = fechas.reverse();
 
     const data = serialData.serie.map((data) => {
       return data.valor;
     });
 
+    const dataReverse = data.reverse();
+
     const datasets = [
       {
-        label: "Moneda",
+        label: `${codigo}`,
         borderColor: "rgb(255, 99, 132)",
-        data
+        data: dataReverse
       }
     ];
 
     if(chart) {
       chart.destroy();
     }
-    return { labels, datasets };
+    return { labels: fechasReverse, datasets };
   } catch (error) {
     alert(error.message);
   }
