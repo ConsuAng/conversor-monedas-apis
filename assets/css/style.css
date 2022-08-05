@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+body {
+  background-color: #495867;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #F7F7FF;
+
+  font-family: 'PT Sans', sans-serif;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #577399;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin: 0;
+  padding: 10px 0;
+}
+
+input {
+  width: 100%;
+}
+
+select {
+  width: 100%;
+}
+
+.bottom {
+  padding-top: 10px;
+}
+
+button {
+  font-family: 'PT Sans', sans-serif;
+  color: #F7F7FF;
+  background-color: #FE5F55;
+  border: none;
+  width: 100%;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 5px 0;
+}
+
+.chart {
+  width: 50%;
+  padding: 30px;
+}
