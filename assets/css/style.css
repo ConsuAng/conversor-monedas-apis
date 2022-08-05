@@ -63,3 +63,7 @@ button {
   width: 50%;
   padding: 30px;
 }
+
+canvas {
+  border-radius: 5px;
+}
